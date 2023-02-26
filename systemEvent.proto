@@ -24,7 +24,7 @@ message RealtimeDataSingle {
   DecimalValue close = 4;
   DecimalValue diffVal = 5;
   DecimalValue diffPct = 6;
-  int32 strength = 7;
+  int32 momentum = 7;
 }
 
 message MinuteChangeData {
