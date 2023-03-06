@@ -29,6 +29,7 @@ message RealtimeDataSingle {
 
 message MinuteChangeData {
   int64 epochSec = 1;
+  repeated string symbols = 2;
 }
 
 message CalculatedData {
