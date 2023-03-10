@@ -10,6 +10,7 @@ service SystemEvent {
   rpc Realtime (RealtimeData) returns (SystemEventReply);
   rpc MinuteChange (MinuteChangeData) returns (SystemEventReply);
   rpc Calculated (CalculatedData) returns (SystemEventReply);
+  rpc MarketDateCutoff (MarketDateCutoffData) returns (SystemEventReply);
   rpc Error (ErrorData) returns (SystemEventReply);
 }
 
@@ -33,6 +34,10 @@ message MinuteChangeData {
 }
 
 message CalculatedData {
+  repeated string symbols = 1;
+}
+
+message MarketDateCutoffData {
   repeated string symbols = 1;
 }
 
