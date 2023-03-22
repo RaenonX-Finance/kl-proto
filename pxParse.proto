@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "KL.PxParse";
+
+package KL;
+
+service PxParse {
+  rpc Subscribe (PxParseSubscribe) returns (PxParseReply);
+}
+
+message PxParseSubscribe {
+  // Should be a list of internal symbol like `NQ`.
+  repeated string symbols = 1;
+}
+
+message PxParseReply {
+  string message = 1;
+}
