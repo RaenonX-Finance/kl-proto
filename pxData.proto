@@ -5,7 +5,7 @@ option csharp_namespace = "KL.Proto";
 package KL;
 
 service PxData {
-  rpc CalcAll (PxCalcRequestMulti) returns (PxCalcReply);
+  rpc CalcAll (PxCalcRequestMulti) returns (stream PxCalcReply);
   rpc CalcPartial (PxCalcRequestMulti) returns (PxCalcReply);
   rpc CalcLast (PxCalcRequestSingle) returns (PxCalcReply);
 }
