@@ -5,7 +5,7 @@ option csharp_namespace = "KL.PxParse";
 package KL;
 
 service PxParse {
-  rpc Subscribe (PxParseSubscribe) returns (PxParseReply);
+  rpc Subscribe (PxParseSubscribe) returns (stream PxParseReply);
 }
 
 message PxParseSubscribe {
