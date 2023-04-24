@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "decimalValue.proto";
-
 option csharp_namespace = "KL.Proto";
 
 package KL;
+
+import "types/decimalValue.proto";
 
 service SystemEvent {
   rpc Realtime (RealtimeData) returns (SystemEventReply);

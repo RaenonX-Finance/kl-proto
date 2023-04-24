@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "KL.Proto";
+
+package KL;
+
+import "types/date.proto";
+
+service PxInfo {
+  rpc GetOptionsOi (PxInfoGetOptions) returns (stream PxInfoReply);
+  rpc GetFinancialEvents (PxInfoGetOptions) returns (stream PxInfoReply);
+}
+
+message PxInfoGetOptions {
+  string symbol = 1;
+  Date date = 2;
+}
+
+message PxInfoReply {
+  string message = 1;
+}
