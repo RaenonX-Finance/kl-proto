@@ -7,12 +7,16 @@ package KL;
 import "types/date.proto";
 
 service PxInfo {
-  rpc GetOptionsOi (PxInfoGetOptions) returns (stream PxInfoReply);
-  rpc GetFinancialEvents (PxInfoGetOptions) returns (stream PxInfoReply);
+  rpc GetOptionsOi (PxInfoGetOptionsOiOptions) returns (stream PxInfoReply);
+  rpc GetFinancialEvents (PxInfoGetFinancialEventsOptions) returns (stream PxInfoReply);
 }
 
-message PxInfoGetOptions {
+message PxInfoGetOptionsOiOptions {
   string symbol = 1;
+  Date date = 2;
+}
+
+message PxInfoGetFinancialEventsOptions {
   Date date = 2;
 }
 
